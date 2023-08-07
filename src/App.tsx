@@ -2,19 +2,19 @@ import { useState, useRef, ChangeEventHandler } from "react";
 import ImagePreview from "./ImagePreview";
 import fileToString from "./utils";
 function App() {
+  const lalal = "lalal";
   const [img, setImg] = useState<string>("");
-  const handleChange:ChangeEventHandler<HTMLInputElement> = async (e) => {
-    const file = e.target.files?.[0]
+  const handleChange: ChangeEventHandler<HTMLInputElement> = async (e) => {
+    const file = e.target.files?.[0];
     if (!file) {
-      return
+      return;
     } else {
-      try{
+      try {
         setImg(await fileToString(file));
-      } catch(error) {
-        console.error(error)
+      } catch (error) {
+        console.error(error);
       }
     }
-
   };
   const handleClose = () => {
     setImg("");
@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       {img === "" ? (
-        <input type="file" onChange={handleChange} accept='image/*'/>
+        <input type="file" onChange={handleChange} accept="image/*" />
       ) : (
         <ImagePreview imageSrc={img} onClose={handleClose} />
       )}
