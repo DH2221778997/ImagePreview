@@ -13,6 +13,7 @@ function ImagePreview({ imageSrc, onClose }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(0);
   const x = 5;
+  const y = 38;
   const fitImageToScreen = () => {
     const container = containerRef.current;
     const image = imageRef.current;
