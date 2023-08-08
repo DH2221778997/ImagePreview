@@ -2,7 +2,7 @@ import { useState, useRef, ChangeEventHandler } from "react";
 import ImagePreview from "./ImagePreview";
 import fileToString from "./utils";
 function App() {
-  const t = "zz";
+  const t = "z";
 
   const [img, setImg] = useState<string>("");
   const handleChange: ChangeEventHandler<HTMLInputElement> = async (e) => {
