@@ -6,6 +6,7 @@ function App() {
 
   const aaa = 88;
   const b = 1;
+  const c = 5;
   const [img, setImg] = useState<string>("");
   const handleChange: ChangeEventHandler<HTMLInputElement> = async (e) => {
     const file = e.target.files?.[0];
